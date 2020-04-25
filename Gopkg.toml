@@ -31,7 +31,7 @@ required = [
 
 [[prune.project]]
   name = "k8s.io/gengo"
-  unused-packages = false 
+  unused-packages = false
 
 [[prune.project]]
   name = "github.com/tensorflow/tensorflow"
@@ -58,24 +58,24 @@ version="v1.4.7"
 
 [[override]]
   name = "k8s.io/api"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
 
 [[override]]
   name = "k8s.io/apimachinery"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
 
 [[override]]
   name = "k8s.io/code-generator"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
 
 [[override]]
   name = "k8s.io/client-go"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
 
 [[constraint]]
   name = "k8s.io/kube-openapi"
-  # This is the version at which k8s.io/apiserver depends on this at its 1.15.3 tag.
-  revision = "b3a7cee44a305be0a69e1b9ac03018307287e1b0"
+  # This is the version at which k8s.io/apiserver depends on this at its 1.18 tag.
+  revision = "bf4fb3bd569c8c84504d856598edbc66c10d8744"
 
 [[override]]
   name = "github.com/tensorflow/tensorflow"
@@ -87,16 +87,25 @@ version="v1.4.7"
 
 [[constraint]]
   name = "k8s.io/kubernetes"
-  version = "=1.15.3"
+  version = "=1.18.2"
 
 [[override]]
   name = "k8s.io/apiserver"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
+
+[[override]]
+  name = "k8s.io/klog"
+  version = "v2.0.0"
 
 [[override]]
   name = "k8s.io/apiextensions-apiserver"
-  version = "kubernetes-1.15.3"
+  version = "kubernetes-1.18.2"
 
-  
+[[constraint]]
+  name = "k8s.io/utils"
+  # This is the version at which k8s.io/client-go depends on this at its 1.18 tag.
+  revision = "a9aa75ae1b89e1b992c33383f48e942d97e52dae"
 
-
+[[constraint]]
+  name = "k8s.io/gengo"
+  revision = "793b05dca9b871fdc15aeaff1f201e141ef5afa7"
