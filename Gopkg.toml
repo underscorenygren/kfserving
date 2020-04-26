@@ -30,10 +30,6 @@ required = [
   unused-packages = false
 
 [[prune.project]]
-  name = "k8s.io/gengo"
-  unused-packages = false
-
-[[prune.project]]
   name = "github.com/tensorflow/tensorflow"
   unused-packages = false
   non-go = false
@@ -99,7 +95,7 @@ version="v1.4.7"
 
 [[override]]
   name = "k8s.io/klog"
-  version = "v2.0.0"
+  version = "v1.0.0"
 
 [[override]]
   name = "k8s.io/gengo"
@@ -108,3 +104,7 @@ version="v1.4.7"
 [[override]]
   name = "k8s.io/utils"
   revision = "6496210b90e852b26b227eaedea39b286063fae6"
+
+[[override]]
+  name = "sigs.k8s.io/structured-merge-diff"
+  revision = "f150478f131e67a09fd93219186b57d7d35a0b75"
